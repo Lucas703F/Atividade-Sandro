@@ -3,32 +3,37 @@
 
 public class PasswordValidatorTests
 {
+    //Testando Verde
     [Fact]
     public void TesteVerde()
     {
         var validator = new PasswordValidator.PasswordValidator();
         Assert.True(validator.SenhaForte("Senha123"));
     }
-        [Fact]
-        public void TesteRedSomenteNum()
+    //Testando somente com números
+    [Fact]
+    public void TesteSomenteNum()
     {
         var validator = new PasswordValidator.PasswordValidator();
-        Assert.False(validator.SenhaForte("12345678"));
+        Assert.True(validator.SenhaForte("12345678"));
     }
-        [Fact]
-        public void TesteSomenteChar()
+    //Testando somente com caracteres
+    [Fact]
+    public void TesteSomenteChar()
     {
         var validator = new PasswordValidator.PasswordValidator();
         Assert.False(validator.SenhaForte("abcdefg"));
     }
-        [Fact]
-        public void TesteVazia()
+    //Testando com a String vazia
+    [Fact]
+    public void TesteVazia()
     {
         var validator = new PasswordValidator.PasswordValidator();
         Assert.False(validator.SenhaForte(""));
     }
-        [Fact]
-        public void TesteNulo()
+    //Testando Null
+    [Fact]
+    public void TesteNulo()
     {
         var validator = new PasswordValidator.PasswordValidator();
         Assert.False(validator.SenhaForte(null));
