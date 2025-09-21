@@ -12,14 +12,14 @@ public class PasswordValidatorTests
     }
     //Testando somente com números
     [Fact]
-    public void TesteSomenteNum()
+    public void TesteOitoNum()
     {
         var validator = new PasswordValidator.PasswordValidator();
         Assert.True(validator.SenhaForte("12345678"));
     }
     //Testando somente com caracteres
     [Fact]
-    public void TesteSomenteChar()
+    public void TesteSeteChar()
     {
         var validator = new PasswordValidator.PasswordValidator();
         Assert.False(validator.SenhaForte("abcdefg"));
