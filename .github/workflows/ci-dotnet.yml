@@ -2,7 +2,7 @@ name: .NET CI
 
 on:
     push:
-        branches: [ main, feature/** ]
+        branches: [ main, AtividadeSandro ]
     pull_request:
         branches: [ main ]
 
