@@ -3,15 +3,10 @@
 public class PasswordValidator
 {
     public bool SenhaForte(string senha) {
-        if (string.IsNullOrEmpty(senha)){
-            return false;
-        }
-        if (senha.Length < 8){
-            return false;
-        }
-        return TemTamanho(senha);
+
+        
+        return !string.IsNullOrEmpty(senha) && TemTamanho(senha);
     }
-    private bool TemTamanho(string senha){
-        return senha.Length >= 8;
-    }
+    private bool TemTamanho(string senha) => senha.Length >= 8;
+    
 }
